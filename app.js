@@ -82,6 +82,9 @@ app.get("/demo", async (req, res) => {
 
 });
 
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
 
 app.use(listingsRoutes);
 app.use(reviewRoutes);
@@ -130,7 +133,7 @@ main()
 // }
 
 
-app.listen(8080, () => {
-    console.log('Server is running on port 8080');
+app.listen(process.env.PORT || 8080, () => {
+    console.log('Server is running');
 });
 
