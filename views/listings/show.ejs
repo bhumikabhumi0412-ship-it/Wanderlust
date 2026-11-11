@@ -7,6 +7,8 @@
     <script>
     window.mapToken = "<%= process.env.MAP_TOKEN %>";
     window.coordinates = <%- JSON.stringify(listing.geometry.coordinates) %>;
+    window.listingLocation = <%- JSON.stringify(listing.location) %>;
+    window.listingCountry = <%- JSON.stringify(listing.country) %>;
 </script>
 
     <div class="row mt-4">
